@@ -1,8 +1,3 @@
-@import './variables';
-@import './form';
-@import './content';
-@import './loader';
-
 * {
   margin: 0;
   padding: 0;
@@ -37,3 +32,9 @@ body {
 .leaflet-bottom.leaflet-right {
   display: none;
 }
+
+@import './variables';
+@import './form';
+@import './content';
+@import './loader';
+@import './media';

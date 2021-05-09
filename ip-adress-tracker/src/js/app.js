@@ -9,6 +9,7 @@ import { setError, removeError } from './validate';
 import './plugins/leaflet/leaflet.css';
 import '../scss/style.scss';
 import './plugins/leaflet/images/marker-shadow.png';
+import './plugins/leaflet/images/marker-icon-2x.png';
 
 let map = L.map('map', {
   center: [34.08057, -118.07285],
