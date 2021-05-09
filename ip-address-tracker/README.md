@@ -16,8 +16,8 @@
 
 ### Links
 
-- Solution URL: [here...](https://www.frontendmentor.io/solutions/iptracker-application-with-js-w4PDF30Ru)
-- Live Site URL: [here...](https://ic3top.github.io/Frontend-Mentor/ip-adress-tracker/dist/)
+- Solution URL: [here.](https://www.frontendmentor.io/solutions/iptracker-application-with-js-w4PDF30Ru)
+- Live Site URL: [here.](https://ic3top.github.io/Frontend-Mentor/ip-address-tracker/dist/)
 
 ## My process
 
