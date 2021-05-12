@@ -1,0 +1,40 @@
+.statistics {
+  margin-top: 20vh;
+  text-align: center;
+}
+
+.statistics-text {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.statistics-images {
+  display: flex;
+  align-items: center;
+  gap: 30px;;
+  margin-top: 50px;
+  text-align: left;
+}
+
+.statics-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.statistics-image {
+  display: inline-block;
+  border-radius: 100%;
+  padding: 20px;
+  background-color: $very-dark-blue;
+}
+
+.statistics-descr {
+  font-size: 14px;
+}
+
+.statistics-divider {
+  width: 125px;
+  height: 7px;
+  background-color: $cyan;
+}
+

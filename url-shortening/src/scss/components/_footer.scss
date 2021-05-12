@@ -1,0 +1,46 @@
+.footer {
+  padding: 50px 0;
+  background-color: $very-dark-violet;
+}
+
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-logo {
+  color: #FFFFFF;
+}
+
+.footer-links {
+  display: flex;
+  gap: 4vw;
+}
+
+.footer-links-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-caption {
+  margin-bottom: 20px;
+  color: #FFFFFF;
+}
+
+.footer-link {
+  margin-top: 20px;
+  font-size: 0.8rem;
+}
+
+.footer-link:hover {
+  color: $cyan;
+}
+
+.footer-soc {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-soc svg:hover path {
+  fill: $cyan;
+}

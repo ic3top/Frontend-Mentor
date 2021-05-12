@@ -1,0 +1,77 @@
+.form {
+  margin-top: 10vh;
+}
+
+.form-group {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  column-gap: 3vw;
+  padding: 7vh 5vw;
+  background-image: url('../images/bg-shorten-desktop.png');
+}
+
+.form-input {
+  font-size: 18px;
+  padding: 10px 25px;
+  border: 2px solid $cyan-light;
+  border-radius: 10px;
+}
+
+.form-input:focus-visible {
+  border: 2px solid $cyan;
+  background-color: #F9F9F9;
+  outline: none;
+}
+
+.form-input-invalid {
+  border: 2px solid red;
+}
+
+.form-label {
+  position: absolute;
+  color: red;
+  left: 20px;
+  bottom: 10px;
+  font-size: 0.8rem;
+}
+
+.form-label-hidden {
+  display: none;
+}
+
+.form-button {
+  padding: 20px 40px;
+  border-radius: 10px;
+}
+
+.form-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-item + .form-item {
+  margin-top: 30px;
+}
+
+.form-item-left {
+  max-width: 90%;
+}
+
+.form-item-left p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.form-item-right {
+  display: flex;
+  align-items: center;
+  gap: 4vw;
+}
+
+.form-item-button {
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 0.8rem;
+}

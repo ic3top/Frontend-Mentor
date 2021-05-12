@@ -1,0 +1,26 @@
+.preview {
+  margin-top: 20vh;
+}
+
+.preview-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3vw;
+}
+
+.preview-title {
+  font-size: 3rem;
+}
+
+.preview-button {
+  padding: 15px 50px;
+}
+
+.preview-left {
+  max-width: 40%;
+}
+
+.preview-right img {
+  max-width: 100%;
+}

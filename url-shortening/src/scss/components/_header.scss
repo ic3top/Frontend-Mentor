@@ -1,0 +1,41 @@
+.header {
+  padding-top: 7vh;
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-left {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: $very-dark-violet;
+}
+
+.header-links {
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.header-link:hover {
+  color: $dark-violet;
+}
+
+.header-button {
+  padding: 10px 30px;
+}
