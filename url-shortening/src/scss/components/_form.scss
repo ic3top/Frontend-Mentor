@@ -8,7 +8,11 @@
   grid-template-columns: 1fr auto;
   column-gap: 3vw;
   padding: 7vh 5vw;
-  background-image: url('../images/bg-shorten-desktop.png');
+  border-radius: 15px;
+  background-image: url('/images/bg-shorten-desktop.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: $dark-violet;
 }
 
 .form-input {

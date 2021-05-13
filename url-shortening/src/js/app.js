@@ -1,6 +1,4 @@
-import '../scss/style.scss';
-import '../images/illustration-working.png'
-import '../images/bg-shorten-desktop.png';
+import './imports/imports';
 import './services/hamburger';
 import { Api } from './services/Api';
 import { UI } from './services/UI';

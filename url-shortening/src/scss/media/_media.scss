@@ -104,6 +104,10 @@
   .form-group {
     grid-template-columns: 1fr;
     gap: 2vh;
+    padding: 30px 20px;
+    background-image: url('/images/bg-shorten-mobile.svg');
+    background-size: contain;
+    background-position: 100%;
   }
 
   .form-button {
@@ -112,5 +116,10 @@
 
   .form-label {
     bottom: 0;
+  }
+
+  .start {
+    background-image: url('/images/bg-boost-mobile.svg');
+    padding: 100px 0;
   }
 }
