@@ -40,8 +40,6 @@ export class LinkUI {
       })
       btn.classList.add('button-copied');
       btn.textContent = 'Copied!';
-    }, function() {
-      /* clipboard write failed */
     });
   }
   
