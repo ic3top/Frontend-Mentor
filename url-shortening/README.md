@@ -21,8 +21,8 @@
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://ic3top.github.io/Frontend-Mentor/url-shortening/dist/)
+- Solution URL: [here](https://www.frontendmentor.io/solutions/url-shorten-landing-page-made-with-jshtmlcss-Zi1d-nNpf)
+- Live Site URL: [DEMO](https://ic3top.github.io/Frontend-Mentor/url-shortening/dist/)
 
 ## My process
 
@@ -63,4 +63,5 @@ I definitely have to improve my knowledge in webpack (btw gulp too). It took me 
 * ~~Fix local links~~
 * Create 'clear all' button
 * ~~Fix images~~
-* complete README
+* ~~Complete README~~
+* Fix accessibility and HTML validation issues
