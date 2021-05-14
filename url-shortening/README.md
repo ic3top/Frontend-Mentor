@@ -6,7 +6,7 @@
 
 ### Features
 
-- View the optimal layout for the site depending on their device's screen size
+- View the optimal layout for the site depending on the device's screen size
 - Shorten any valid URL
 - See a list of shortened links, even after refreshing the browser
 - Copy the shortened link to the clipboard in a single click
@@ -62,6 +62,6 @@ I definitely have to improve my knowledge in webpack (btw gulp too). It took me 
 ### Todos
 * ~~Fix local links~~
 * Create 'clear all' button
-* ~~Fix images~~
+* Fix images
 * ~~Complete README~~
-* Fix accessibility and HTML validation issues
+* ~~Fix accessibility and HTML validation issues~~

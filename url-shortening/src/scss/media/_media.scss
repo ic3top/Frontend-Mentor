@@ -62,20 +62,20 @@
 
   .statistics-images {
     flex-direction: column;
-    gap: 0;
+    gap: 10px;
   }
 
   .statistics-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     text-align: center;
+  }
+
+  .statistics-image {
+    top: unset;
   }
 
   .statistics-divider {
     height: 50px;
     width: 7px;
-    margin-top: 20px;
   }
 
   .mt-50, .mt-100 {
