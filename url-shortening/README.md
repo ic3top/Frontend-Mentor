@@ -1,6 +1,6 @@
-# Frontend Mentor - Shortly URL shortening API Challenge solution
+# Shortly URL - Challenge solution
 
-> This is a solution to the [Shortly URL shortening API Challenge challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G).
+> This is a solution to the [Shortly URL shortening API Challenge - challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G).
 
 ## Overview
 
@@ -61,7 +61,7 @@ I definitely have to improve my knowledge in webpack (btw gulp too). It took me 
 
 ### Todos
 * ~~Fix local links~~
-* Create 'clear all' button
+* ~~Create 'clear all' button~~
 * Fix images
 * ~~Complete README~~
 * ~~Fix accessibility and HTML validation issues~~
