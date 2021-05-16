@@ -1,4 +1,4 @@
-import { UI } from './UI';
+import { UI } from '../components/UI';
 
 export class Validation {
   static setError(message) {

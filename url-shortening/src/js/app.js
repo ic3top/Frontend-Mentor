@@ -1,15 +1,17 @@
 import './imports/imports';
-import './services/hamburger';
-import { Api } from './services/Api';
-import { UI } from './services/UI';
-import { BtnLoader } from './services/BtnLoader';
-import { LinkUI } from './services/LinkUI';
+import './components/hamburger';
 import { Validation } from './services/Validation';
+import { Api } from './services/Api';
+import { UI } from './components/UI';
+import { BtnLoader } from './components/BtnLoader';
+import { LinkUI } from './components/LinkUI';
+import { showDeleteBtn } from './components/BtnDelete';
 
 if (localStorage['items']) {
+  showDeleteBtn();
   JSON.parse(localStorage['items']).forEach((item) => {
     const newIitem = LinkUI.renderItem(item.oldUrl, item.newUrl);
-    UI.itemContainer.insertAdjacentElement('beforeend', newIitem);
+    UI.itemContainer.insertAdjacentElement('afterbegin', newIitem);
   });
 }
 
@@ -17,11 +19,12 @@ UI.mainForm.addEventListener('submit', (e) => {
   e.preventDefault();
   const inputData = UI.urlInput.value;
   if (inputData.trim()) {
-    BtnLoader.setLoader();
+    BtnLoader.show();
     Api.short(inputData)
       .then(data => {
         if (data.ok) {
           LinkUI.appendItem(data.result.original_link, data.result.full_short_link);
+          showDeleteBtn();
         } else {
           throw Error(data.error);
         }
@@ -31,7 +34,7 @@ UI.mainForm.addEventListener('submit', (e) => {
       })
       .then(() => {
         UI.urlInput.value = '';
-        BtnLoader.remLoader();
+        BtnLoader.hide();
       })
   }
 });

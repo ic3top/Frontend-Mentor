@@ -4,5 +4,6 @@ export const UI = {
   submitBtn: document.getElementById('submit-button'),
   btnLoader: document.getElementById('loader'),
   itemContainer: document.getElementById('items-container'),
-  validationLabel: document.getElementById('validation-label')
+  validationLabel: document.getElementById('validation-label'),
+  deleteBtn: document.getElementById('delete-button')
 }

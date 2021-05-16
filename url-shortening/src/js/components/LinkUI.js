@@ -1,4 +1,5 @@
 import { UI } from './UI';
+import { showDeleteBtn } from './BtnDelete';
 
 export class LinkUI {
   static renderItem(oldUrl, newUrl) {
@@ -45,7 +46,7 @@ export class LinkUI {
   
   static appendItem(oldUrl, newUrl) {
     const itemHTML = LinkUI.renderItem(oldUrl, newUrl);
-    UI.itemContainer.insertAdjacentElement('beforeend', itemHTML);
+    UI.itemContainer.insertAdjacentElement('afterbegin', itemHTML);
     localStorage['items'] = localStorage['items'] ? 
       JSON.stringify([ ...JSON.parse(localStorage['items']), { newUrl, oldUrl }]) :
       JSON.stringify([{ oldUrl, newUrl }]);
