@@ -1,11 +1,12 @@
-import './imports/imports';
+import '../scss/style.scss';
 import './components/hamburger';
-import { Validation } from './services/Validation';
-import { Api } from './services/Api';
 import { UI } from './components/UI';
 import { BtnLoader } from './components/BtnLoader';
 import { LinkUI } from './components/LinkUI';
 import { showDeleteBtn } from './components/BtnDelete';
+
+import { Validation } from './services/Validation';
+import { Api } from './services/Api';
 
 if (localStorage['items']) {
   showDeleteBtn();

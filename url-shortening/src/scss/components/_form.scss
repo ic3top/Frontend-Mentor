@@ -10,7 +10,7 @@
   column-gap: 3vw;
   padding: 7vh 5vw;
   border-radius: 15px;
-  background-image: url('/images/bg-shorten-desktop.svg');
+  background-image: url('../images/bg-shorten-desktop.svg');
   background-size: cover;
   background-repeat: no-repeat;
   background-color: $dark-violet;
@@ -25,7 +25,7 @@
 
 .form-input:focus-visible {
   border: 2px solid $cyan;
-  background-color: #F9F9F9;
+  background-color: #f9f9f9;
   outline: none;
 }
 
