@@ -12,7 +12,7 @@
 - Copy the shortened link to the clipboard in a single click
 - Receive an error message when the `form` is submitted if:
   - The `input` field is empty
-  - API return an `error`
+  - Request return an `error`
   
 
 ### Screenshot
@@ -51,7 +51,7 @@ Also, take in mind that for page scripts, the Permissions API's "clipboard-write
 
 ### Continued development
 
-I definitely have to improve my knowledge in webpack (btw gulp too). It took me so long to set up the project and finally start writing code.
+I definitely have to improve my knowledge in webpack (btw gulp too). This project inspired me to create a new webpack config (I added it to repo)
 
 ### Useful resources
 
@@ -62,6 +62,6 @@ I definitely have to improve my knowledge in webpack (btw gulp too). It took me 
 ### Todos
 * ~~Fix local links~~
 * ~~Create 'clear all' button~~
-* Fix images
+* ~~Fix images~~
 * ~~Complete README~~
 * ~~Fix accessibility and HTML validation issues~~
