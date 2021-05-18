@@ -1,0 +1,15 @@
+*.sketch
+*.xd
+*.fig
+.DS_Store
+
+node_modules
+
+design*
+style*
+README-template.md
+
+.eslintrc
+.babelrc
+.stylelintrc*
+postcss.config*
