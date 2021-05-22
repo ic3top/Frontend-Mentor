@@ -31,4 +31,10 @@ export default class Api {
     const data = await res.json();
     return data;
   }
+
+  static async getDetailsByName(name) {
+    const res = await fetch(`https://restcountries.eu/rest/v2/name/${name}?fields=name;nativeName;capital;population;region;flag;subregion;topLevelDomain;borders;currencies;languages;Alpha3Code`);
+    const data = await res.json();
+    return data;
+  }
 }

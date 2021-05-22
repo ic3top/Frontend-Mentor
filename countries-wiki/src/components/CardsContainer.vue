@@ -1,8 +1,9 @@
 <template>
-  <div class="p-grid p-mt-6">
+  <div class="p-grid">
     <div v-for="countryObj in allCountries" :key="countryObj.alpha3Code" class="p-mt-5 p-col-3">
      <DeferredContent>
        <card-country
+         @card-clicked="cardClicked"
          :flag="countryObj.flag"
          :capital="countryObj.capital"
          :name="countryObj.name"
@@ -26,9 +27,15 @@ export default {
       default: () => [],
     },
   },
+  emits: ['cardClicked'],
   components: {
     CardCountry,
     DeferredContent,
+  },
+  methods: {
+    cardClicked(name) {
+      this.$emit('cardClicked', name);
+    },
   },
 };
 </script>

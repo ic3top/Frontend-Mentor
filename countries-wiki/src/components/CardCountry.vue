@@ -1,5 +1,5 @@
 <template>
-  <Card class="p-shadow-4">
+  <Card class="p-shadow-4 card" @click="cardClicked">
     <template #header>
       <img :src="flag" style="height: 10rem" />
     </template>
@@ -11,7 +11,7 @@
     </template>
     <template #content>
       <ul class="p-reset">
-        <li><b>Population:</b> {{ population }}</li>
+        <li><b>Population:</b> {{ populationModified }}</li>
         <li><b>Region:</b> {{ region }}</li>
       </ul>
     </template>
@@ -45,10 +45,20 @@ export default {
       required: true,
     },
   },
+  emits: ['cardClicked'],
   components: {
     Card,
   },
-  // TODO: population with commas
+  computed: {
+    populationModified() {
+      return this.population.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    },
+  },
+  methods: {
+    cardClicked() {
+      this.$emit('cardClicked', this.name);
+    },
+  },
 };
 </script>
 
@@ -57,5 +67,9 @@ export default {
   box-shadow: 0 4px 8px -1px rgb(0 0 0 / 20%),
   0 8px 12px 0 rgb(0 0 0 / 14%),
   0 2px 16px 0 rgb(0 0 0 / 12%);
+}
+
+.card {
+  cursor: pointer;
 }
 </style>

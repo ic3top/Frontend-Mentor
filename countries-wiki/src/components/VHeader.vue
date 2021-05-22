@@ -1,5 +1,5 @@
 <template>
-  <Menubar>
+  <Menubar class="header">
     <template #start>
       <h1>Where in the world?</h1>
     </template>
@@ -32,5 +32,12 @@ export default {
 
 ::v-deep .p-menubar-button {
   display: none!important;
+}
+
+.header {
+  position: fixed;
+  top: 0px;
+  z-index: 1000;
+  width: 100%;
 }
 </style>

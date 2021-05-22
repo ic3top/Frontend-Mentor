@@ -21,12 +21,15 @@ export default {
   data() {
     return {
       selectedRegion: null,
-      regions: ['Africa', 'Americas', 'Asia', 'Europe', 'Oceania'],
+      previousRegion: null,
+      regions: ['Africa', 'Americas', 'Asia', 'Europe', 'Oceania', 'All'],
     };
   },
   methods: {
     regionSelect() {
+      if (this.selectedRegion === this.previousRegion) return;
       this.$emit('select', this.selectedRegion);
+      this.previousRegion = this.selectedRegion;
     },
   },
 };
