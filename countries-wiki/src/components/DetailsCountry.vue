@@ -13,13 +13,15 @@
 
     <div class="p-grid">
       <div class="p-col-6 p-d-flex p-jc-center">
-        <img :src="details.flag" alt="Country flag" style="height: 12rem">
+        <img :src="details.flag" alt="Country flag" style="max-width: 100%">
       </div>
       <div class="p-col-6 p-grid">
         <div class="p-col-5">
           <ul class="p-reset">
             <li><b>Native name:</b> {{ details.nativeName }}</li>
-            <li class="p-mt-4 p-text-capitalize"><b>Population:</b> {{ details.population }}</li>
+            <li class="p-mt-4 p-text-capitalize">
+              <b>Population:</b> {{ separateNumber(details.population) }}
+            </li>
             <li class="p-mt-4 p-text-capitalize"><b>Region:</b> {{ details.region }}</li>
             <li class="p-mt-4 p-text-capitalize"><b>Sub Region:</b> {{ details.subregion }}</li>
             <li class="p-mt-4 p-text-capitalize"><b>Capital:</b> {{ details.capital }}</li>
@@ -49,6 +51,7 @@
 <script>
 import Dialog from 'primevue/dialog';
 import Button from 'primevue/button';
+import separateNumber from '../services/separateNumber';
 
 export default {
   name: 'DetailsCountry',
@@ -57,7 +60,6 @@ export default {
       type: Boolean,
       required: true,
     },
-    // TODO: handle undefined type
     details: {
       type: Object,
       required: true,
@@ -77,6 +79,7 @@ export default {
     },
   },
   methods: {
+    separateNumber,
     detailsMaximized() {
       // eslint-disable-next-line no-console
       console.log('Maximized...');
@@ -85,6 +88,23 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
+.p-dialog-header {
+  background-color: var(--surface-200)!important;
+  color: var(--text-color)!important;
+}
 
+.p-dialog-content {
+  background-color: var(--surface-200)!important;
+  color: var(--text-color)!important;
+}
+
+.p-dialog-footer {
+  background-color: var(--surface-200)!important;
+  color: var(--text-color)!important;
+}
+
+.p-dialog-header-icon {
+  color: var(--text-color)!important;
+}
 </style>

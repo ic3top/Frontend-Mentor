@@ -1,5 +1,8 @@
 <template>
-  <Card class="p-shadow-4 card" @click="cardClicked">
+  <Card class="p-shadow-4 card"
+        @click="cardClicked"
+        style="background-color: var(--surface-100); color: var(--text-color)"
+  >
     <template #header>
       <img :src="flag" style="height: 10rem" />
     </template>
@@ -11,7 +14,7 @@
     </template>
     <template #content>
       <ul class="p-reset">
-        <li><b>Population:</b> {{ populationModified }}</li>
+        <li><b>Population:</b> {{ separateNumber(population) }}</li>
         <li><b>Region:</b> {{ region }}</li>
       </ul>
     </template>
@@ -20,6 +23,7 @@
 
 <script>
 import Card from 'primevue/card';
+import separateNumber from '../services/separateNumber';
 
 export default {
   name: 'CardCountry',
@@ -49,12 +53,8 @@ export default {
   components: {
     Card,
   },
-  computed: {
-    populationModified() {
-      return this.population.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-    },
-  },
   methods: {
+    separateNumber,
     cardClicked() {
       this.$emit('cardClicked', this.name);
     },

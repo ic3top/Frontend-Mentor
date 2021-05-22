@@ -4,7 +4,7 @@
     <div class="p-grid">
       <div class="p-col-6">
         <search-input @input="searchPerQuery"
-                      @select-item="getCountryByName"
+                      @select-item="showDetails"
                       :filtered-countries="filteredCountries"
         />
       </div>
@@ -50,10 +50,6 @@ export default {
         .toLowerCase()
         .startsWith(query.toLowerCase()));
     },
-    async getCountryByName(name) {
-      // eslint-disable-next-line no-console
-      console.log(await Api.getCountryByName(name));
-    },
     async changeRegion(regionName) {
       if (regionName === 'All') {
         this.countriesList = await Api.getAllCountries();
@@ -80,7 +76,11 @@ export default {
 };
 </script>
 
-<style >
+<style>
+:root {
+  --border-color: rgba(255, 255, 255, 0.3);
+}
+
 html {
   font-size: 16px;
 }

@@ -36,5 +36,21 @@ export default {
 </script>
 
 <style scoped>
+.p-dropdown {
+  background-color: var(--surface-100);
+  border: solid 1px;
+  border-color: var(--border-color);
+}
 
+::v-deep .p-inputtext {
+  color: var(--text-color);
+}
+
+::v-deep .p-dropdown .p-dropdown-label.p-placeholder {
+  color: var(--text-color-secondary);
+}
+
+::v-deep .p-dialog-header {
+  color: var(--text-color);
+}
 </style>

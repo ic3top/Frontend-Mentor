@@ -31,7 +31,6 @@ export default {
       selectedCountry: '',
     };
   },
-  // https://restcountries.eu/rest/v2/name/an?fields=name;
   methods: {
     filterCountries(e) {
       this.$emit('input', e.query);
@@ -47,5 +46,15 @@ export default {
 <style scoped>
 .p-input-icon-right {
   display: block;
+}
+
+::v-deep .p-inputtext {
+  background-color: var(--surface-100);
+  color: var(--text-color);
+  border-color: var(--border-color);
+}
+
+::v-deep .p-inputtext::placeholder {
+  color: var(--text-color-secondary);
 }
 </style>
