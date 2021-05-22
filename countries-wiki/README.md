@@ -1,5 +1,5 @@
 # rest-countries-api-with-color-theme-switcher-master
-
+> [Demo here...](https://ic3top.github.io/Frontend-Mentor/countries-wiki/dist/)
 ## Project setup
 ```
 npm install
@@ -26,7 +26,8 @@ npm run lint
 ```
 
 ### TODOs
-* Add skeleton loader
-* Include `All` label in select region dropdown
+* Add skeleton loaders
+* ~~Include `All` label in select region dropdown + caching previous one~~
 * Create light theme
-
+* ~~Create details model window about each country~~
+* Improve design while 'details' window maximized
