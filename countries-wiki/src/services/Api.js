@@ -35,6 +35,19 @@ export default class Api {
   static async getDetailsByName(name) {
     const res = await fetch(`https://restcountries.eu/rest/v2/name/${name}?fields=name;nativeName;capital;population;region;flag;subregion;topLevelDomain;borders;currencies;languages;Alpha3Code`);
     const data = await res.json();
+    data[0].borders = await Api.getNamesByCode(data[0].borders) || [];
     return data;
+  }
+
+  static async getNamesByCode(codeArr) {
+    try {
+      const res = await fetch(`https://restcountries.eu/rest/v2/alpha?codes=${codeArr.join(';')}`);
+      const data = await res.json();
+      return data?.map(({ name }) => name);
+    } catch (err) {
+      // eslint-disable-next-line no-console
+      console.log(err);
+      return [];
+    }
   }
 }

@@ -82,7 +82,7 @@ export default {
 .header {
   position: fixed;
   top: 0px;
-  z-index: 1000;
+  z-index: 100;
   width: 100%;
   background-color: var(--surface-200);
   color: var(--text-color);

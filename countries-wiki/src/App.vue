@@ -8,14 +8,18 @@
                       :filtered-countries="filteredCountries"
         />
       </div>
-      <div class="p-offset-3 p-col-3">
+      <div class="p-lg-offset-3 p-lg-3 p-sm-offset-2 p-sm-4 p-col-6">
         <region-dropdown @select="changeRegion"/>
       </div>
     </div>
-    <cards-container :all-countries="countriesList" @cardClicked="showDetails" />
+    <cards-container :all-countries="countriesList" @cardClick="showDetails" />
   </div>
 
-  <details-country :display="displayDetails" :details="details[0]" @close="closeDetails" />
+  <details-country :display="displayDetails"
+                   :details="details[0]"
+                   @close="closeDetails"
+                   @border-button-click="showDetails"
+  />
 </template>
 
 <script>
@@ -94,12 +98,41 @@ body {
   color: var(--text-color);
   min-height: 100vh;
 }
+
 .container {
-  width: 1440px;
+  width: 1140px;
   margin: 0 auto;
 }
 
 .custom-mt {
   margin-top: 100px;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 960px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    width: 720px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 540px;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .container {
+    width: 95%;
+  }
 }
 </style>

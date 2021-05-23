@@ -1,7 +1,7 @@
 <template>
   <Dialog :visible="display"
-          :breakpoints="{'640px': '100vw'}"
-          :style="{width: '60vw'}"
+          :breakpoints="{'768px': '95vw'}"
+          :style="{width: '70vw'}"
           :closable="false"
           :maximizable="true"
           :modal="true"
@@ -12,27 +12,42 @@
     </template>
 
     <div class="p-grid">
-      <div class="p-col-6 p-d-flex p-jc-center">
+      <div class="p-lg-6 p-col-12 p-d-flex p-jc-center">
         <img :src="details.flag" alt="Country flag" style="max-width: 100%">
       </div>
-      <div class="p-col-6 p-grid">
-        <div class="p-col-5">
+      <div class="p-lg-6 p-col-12 p-grid">
+        <h3 class="p-col-12 p-my-2">General info:</h3>
+        <div class="p-md-5">
           <ul class="p-reset">
             <li><b>Native name:</b> {{ details.nativeName }}</li>
             <li class="p-mt-4 p-text-capitalize">
               <b>Population:</b> {{ separateNumber(details.population) }}
             </li>
             <li class="p-mt-4 p-text-capitalize"><b>Region:</b> {{ details.region }}</li>
-            <li class="p-mt-4 p-text-capitalize"><b>Sub Region:</b> {{ details.subregion }}</li>
-            <li class="p-mt-4 p-text-capitalize"><b>Capital:</b> {{ details.capital }}</li>
+            <li class="p-mt-4 p-text-capitalize">
+              <b>Sub Region:</b> {{ details.subregion || 'Undefined' }}
+            </li>
+            <li class="p-mt-4 p-text-capitalize">
+              <b>Capital:</b> {{ details.capital || 'Undefined' }}
+            </li>
           </ul>
         </div>
-        <div class="p-col-6 p-offset-1">
+        <div class="p-md-6 p-md-offset-1">
           <ul class="p-reset">
             <li><b>Top Level Domain:</b> {{ details.topLevelDomain[0] }}</li>
             <li class="p-mt-4"><b>Currencies:</b> {{ currencies }}</li>
             <li class="p-mt-4"><b>Languages:</b> {{ language }}</li>
           </ul>
+        </div>
+
+        <div class="p-col-12" v-if="details.borders.length > 0">
+          <h3 class="p-my-2">Borders:</h3>
+          <Button v-for="name in details.borders"
+                  :key="name"
+                  :label="name"
+                  class="p-button-raised p-button-text p-ml-3 p-mt-1"
+                  @click="$emit('borderButtonClick', name)"
+          ></Button>
         </div>
       </div>
     </div>
@@ -65,7 +80,7 @@ export default {
       required: true,
     },
   },
-  emits: ['close'],
+  emits: ['close', 'borderButtonClick'],
   components: {
     Dialog,
     Button,

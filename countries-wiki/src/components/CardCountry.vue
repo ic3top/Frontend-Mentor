@@ -3,8 +3,10 @@
         @click="cardClicked"
         style="background-color: var(--surface-100); color: var(--text-color)"
   >
-    <template #header>
-      <img :src="flag" style="height: 10rem" />
+    <template #header class="">
+      <div class="p-d-flex p-jc-center">
+        <img :src="flag" style="height: 11rem; max-width: 20rem" />
+      </div>
     </template>
     <template #title>
       <h2 class="p-reset">{{ name }}</h2>
@@ -49,14 +51,14 @@ export default {
       required: true,
     },
   },
-  emits: ['cardClicked'],
+  emits: ['cardClick'],
   components: {
     Card,
   },
   methods: {
     separateNumber,
     cardClicked() {
-      this.$emit('cardClicked', this.name);
+      this.$emit('cardClick', this.name);
     },
   },
 };
