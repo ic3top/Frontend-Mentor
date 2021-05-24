@@ -13,7 +13,7 @@ The challenge was to integrate with the [REST Countries API](https://restcountri
 - Toggle the color scheme between light and dark mode
 
 ### TODOs
-* Add skeleton loaders
+* ~~Add skeleton loaders~~
 * ~~Include `All` label in select region dropdown + caching previous one~~
 * ~~Create light theme~~
 * ~~Create details model window about each country~~
