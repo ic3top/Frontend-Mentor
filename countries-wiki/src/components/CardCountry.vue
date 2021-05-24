@@ -3,7 +3,7 @@
         @click="cardClicked"
         style="background-color: var(--surface-100); color: var(--text-color)"
   >
-    <template #header class="">
+    <template #header>
       <div class="p-d-flex p-jc-center">
         <img :src="flag" style="height: 11rem; max-width: 20rem" />
       </div>
@@ -73,5 +73,9 @@ export default {
 
 .card {
   cursor: pointer;
+}
+
+::v-deep(.p-card-subtitle) {
+  color: grey !important;
 }
 </style>

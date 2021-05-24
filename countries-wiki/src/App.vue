@@ -16,7 +16,7 @@
   </div>
 
   <details-country :display="displayDetails"
-                   :details="details[0]"
+                   :details="details[0] || {}"
                    @close="closeDetails"
                    @border-button-click="showDetails"
   />
@@ -55,6 +55,7 @@ export default {
         .startsWith(query.toLowerCase()));
     },
     async changeRegion(regionName) {
+      this.countriesList = [];
       if (regionName === 'All') {
         this.countriesList = await Api.getAllCountries();
         return;
@@ -62,16 +63,16 @@ export default {
       this.countriesList = await Api.getCountriesByRegion(regionName);
     },
     showDetails(name) {
+      this.closeDetails();
+      this.displayDetails = true;
       Api.getDetailsByName(name)
         .then((data) => {
           this.details = data;
-        })
-        .then(() => {
-          this.displayDetails = true;
         });
     },
     closeDetails() {
       this.displayDetails = false;
+      this.details = [];
     },
   },
   async mounted() {
@@ -83,6 +84,10 @@ export default {
 <style>
 :root {
   --border-color: rgba(255, 255, 255, 0.3);
+  --skeleton-bg: rgba(255, 255, 255, 0.06);
+  --skeleton-after: linear-gradient(90deg, rgba(255, 255, 255, 0),
+                                           rgba(255, 255, 255, 0.04),
+                                           rgba(255, 255, 255, 0));
 }
 
 html {
@@ -108,6 +113,13 @@ body {
   margin-top: 100px;
 }
 
+.p-skeleton::after {
+  background: var(--skeleton-after) !important;
+}
+
+.p-skeleton {
+  background-color: var(--skeleton-bg) !important;
+}
 @media screen and (max-width: 1200px) {
   .container {
     width: 960px;

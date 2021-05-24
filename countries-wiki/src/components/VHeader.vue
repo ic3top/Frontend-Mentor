@@ -46,6 +46,8 @@ export default {
       root.style.setProperty('--surface-100', '#FFFFFF');
       root.style.setProperty('--text-color', '#333333');
       root.style.setProperty('--border-color', '#3e3e3e');
+      root.style.setProperty('--skeleton-bg', 'rgba(0, 0, 0, 0.08)');
+      root.style.setProperty('--skeleton-after', 'linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0))');
     },
     setDark() {
       const root = document.documentElement;
@@ -53,6 +55,8 @@ export default {
       root.style.setProperty('--surface-100', '#1e1e1e');
       root.style.setProperty('--text-color', 'rgba(255, 255, 255, 0.87)');
       root.style.setProperty('--border-color', 'rgba(255, 255, 255, 0.3)');
+      root.style.setProperty('--skeleton-bg', 'rgba(255, 255, 255, 0.06)');
+      root.style.setProperty('--skeleton-after', 'linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0))');
     },
   },
   computed: {
