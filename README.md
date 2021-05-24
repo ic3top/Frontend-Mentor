@@ -7,3 +7,4 @@ It's a website where you practice by building real-life projects. Improve your f
 ## All DEMO links for completed projects
 * [Ip address tracker](https://ic3top.github.io/Frontend-Mentor/ip-address-tracker/dist/)
 * [Url shortening app](https://ic3top.github.io/Frontend-Mentor/url-shortening/dist/)
+* [Countries wiki](https://ic3top.github.io/Frontend-Mentor/countries-wiki/dist/)
