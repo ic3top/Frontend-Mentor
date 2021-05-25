@@ -5,19 +5,19 @@
   >
     <template #header>
       <div class="p-d-flex p-jc-center">
-        <img :src="flag" style="height: 11rem; max-width: 20rem" />
+        <img :src="countryObj['flag']" style="height: 11rem; max-width: 20rem" alt="Country flag" />
       </div>
     </template>
     <template #title>
-      <h2 class="p-reset">{{ name }}</h2>
+      <h2 class="p-reset">{{ countryObj.name }}</h2>
     </template>
     <template #subtitle>
-      {{ capital || 'Undefined' }}
+      {{ countryObj.capital || 'Undefined' }}
     </template>
     <template #content>
       <ul class="p-reset">
-        <li><b>Population:</b> {{ separateNumber(population) }}</li>
-        <li><b>Region:</b> {{ region }}</li>
+        <li><b>Population:</b> {{ separateNumber(countryObj.population) }}</li>
+        <li><b>Region:</b> {{ countryObj.region }}</li>
       </ul>
     </template>
   </Card>
@@ -30,25 +30,9 @@ import separateNumber from '../services/separateNumber';
 export default {
   name: 'CardCountry',
   props: {
-    flag: {
-      type: String,
-      required: true,
-    },
-    name: {
-      type: String,
-      required: true,
-    },
-    population: {
-      type: Number,
-      required: true,
-    },
-    region: {
-      type: String,
-      required: true,
-    },
-    capital: {
-      type: String,
-      required: true,
+    countryObj: {
+      type: Object,
+      default: () => ({}),
     },
   },
   emits: ['cardClick'],
@@ -58,7 +42,7 @@ export default {
   methods: {
     separateNumber,
     cardClicked() {
-      this.$emit('cardClick', this.name);
+      this.$emit('cardClick', this.countryObj.name);
     },
   },
 };
@@ -75,7 +59,7 @@ export default {
   cursor: pointer;
 }
 
-::v-deep(.p-card-subtitle) {
+:deep(.p-card-subtitle) {
   color: grey !important;
 }
 </style>

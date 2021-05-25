@@ -42,15 +42,19 @@ export default {
   border-color: var(--border-color);
 }
 
-::v-deep .p-inputtext {
+:deep(.p-inputtext) {
   color: var(--text-color);
 }
 
-::v-deep .p-dropdown .p-dropdown-label.p-placeholder {
+:deep(.p-dropdown .p-dropdown-label.p-placeholder) {
   color: var(--text-color-secondary);
 }
 
-::v-deep .p-dialog-header {
+:deep(p-dialog-header) {
   color: var(--text-color);
+}
+
+:deep(.p-dropdown .p-dropdown-trigger) {
+  color: var(--text-color-secondary);
 }
 </style>

@@ -79,7 +79,7 @@ export default {
   padding: 0 10vw;
 }
 
-::v-deep .p-menubar-button {
+:deep(.p-menubar-button) {
   display: none!important;
 }
 

@@ -48,13 +48,13 @@ export default {
   display: block;
 }
 
-::v-deep .p-inputtext {
+:deep(.p-inputtext) {
   background-color: var(--surface-100);
   color: var(--text-color);
   border-color: var(--border-color);
 }
 
-::v-deep .p-inputtext::placeholder {
+:deep(.p-inputtext::placeholder) {
   color: var(--text-color-secondary);
 }
 </style>

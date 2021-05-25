@@ -7,17 +7,13 @@
      <DeferredContent>
        <card-country
          @card-click="cardClick"
-         :flag="countryObj.flag"
-         :capital="countryObj.capital"
-         :name="countryObj.name"
-         :region="countryObj.region"
-         :population="countryObj.population"
+         :countryObj="countryObj"
        />
      </DeferredContent>
     </div>
   </div>
   <div class="p-grid" v-else>
-    <div v-for="i in Array(8)"
+    <div v-for="i in 8"
          :key="i"
          class="p-mt-5 p-xl-3 p-lg-4 p-sm-6 p-col-12"
     >

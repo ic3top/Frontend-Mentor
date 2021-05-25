@@ -116,7 +116,7 @@ export default {
   props: {
     display: {
       type: Boolean,
-      required: true,
+      default: false,
     },
     details: {
       type: Object,
