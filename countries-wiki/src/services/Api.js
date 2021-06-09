@@ -41,6 +41,7 @@ const Api = {
   },
 
   async getNamesByCode(codeArr) {
+    if (codeArr.length === 0) return [];
     try {
       const res = await fetch(`${this.basicUrl}/alpha?codes=${codeArr.join(';')}`);
       const data = await res.json();

@@ -55,44 +55,7 @@
       </div>
     </div>
 
-    <div class="p-grid" v-else>
-      <div class="p-lg-6 p-col-12 p-d-flex p-jc-center">
-        <Skeleton width="100%" height="100%" style="min-height: 20rem"></Skeleton>
-      </div>
-      <div class="p-lg-6 p-col-12 p-grid">
-        <h3 class="p-col-12 p-my-2">General info:</h3>
-        <div class="p-sm-5 p-col-12">
-          <ul class="p-reset">
-            <li>
-              <Skeleton width="100%" height="1.5rem"></Skeleton>
-            </li>
-            <li class="p-mt-4">
-              <Skeleton width="100%" height="1.5rem"></Skeleton>
-            </li>
-            <li class="p-mt-4">
-              <Skeleton width="100%" height="1.5rem"></Skeleton>
-            </li>
-            <li class="p-mt-4">
-              <Skeleton width="100%" height="1.5rem"></Skeleton>
-            </li>
-            <li class="p-mt-4">
-              <Skeleton width="100%" height="1.5rem"></Skeleton>
-            </li>
-          </ul>
-        </div>
-        <div class="p-sm-6 p-sm-offset-1 p-col-12">
-          <ul class="p-reset">
-            <li><Skeleton width="100%" height="1.5rem"></Skeleton></li>
-            <li class="p-mt-4"><Skeleton width="100%" height="1.5rem"></Skeleton></li>
-            <li class="p-mt-4"><Skeleton width="100%" height="1.5rem"></Skeleton></li>
-          </ul>
-        </div>
-
-        <div class="p-col-12">
-          <Skeleton width="100%" height="3rem"></Skeleton>
-        </div>
-      </div>
-    </div>
+    <details-country-skl v-else />
 
     <template #footer>
       <Button @click="$emit('close')"
@@ -110,6 +73,7 @@ import Dialog from 'primevue/dialog';
 import Button from 'primevue/button';
 import Skeleton from 'primevue/skeleton';
 import separateNumber from '../services/separateNumber';
+import DetailsCountrySkl from './skeletons/DetailsCountrySkl.vue';
 
 export default {
   name: 'DetailsCountry',
@@ -128,6 +92,7 @@ export default {
   components: {
     Dialog,
     Button,
+    DetailsCountrySkl,
     Skeleton,
   },
   computed: {
