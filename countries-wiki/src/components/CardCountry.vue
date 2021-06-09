@@ -1,5 +1,5 @@
 <template>
-  <Card class="p-shadow-4 card"
+  <Card class="p-shadow-4 custom-card"
         @click="cardClicked"
         style="background-color: var(--surface-100); color: var(--text-color)"
   >
@@ -55,8 +55,9 @@ export default {
   0 2px 16px 0 rgb(0 0 0 / 12%);
 }
 
-.card {
+.p-card {
   cursor: pointer;
+  height: 100%;
 }
 
 :deep(.p-card-subtitle) {

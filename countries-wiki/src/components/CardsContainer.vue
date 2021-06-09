@@ -4,7 +4,7 @@
          :key="countryObj.alpha3Code"
          class="p-mt-5 p-xl-3 p-lg-4 p-sm-6 p-col-12"
     >
-     <DeferredContent>
+     <DeferredContent style="height: 100%">
        <card-country
          @card-click="cardClick"
          :countryObj="countryObj"
