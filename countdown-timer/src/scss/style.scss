@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap');
+@import './flipdown/flipdown';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+body {
+  margin: 0;
+  font-family: 'Red Hat Text', sans-serif;
+  color: #fff;
+  background-color: #201e29;
+  background-image: url('../images/bg-stars.svg');
+}
+
+.container {
+  width: 550px;
+  margin: 20vh auto 0 auto;
+}
+
+.flipdown {
+  margin: 10vh auto 0 auto;
+}
+
+.title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: 4px;
+}
+
+.bg-hills {
+  position: absolute;
+  bottom: 0;
+  background-image: url('../images/pattern-hills.svg');
+  height: 200px;
+  width: 100%;
+  z-index: -1;
+}
+
+@media (max-width: 550px) {
+  .container {
+    width: 100%;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+}
